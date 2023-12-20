@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Document</title>
+  <style>body{
+  margin:0px;
+  padding:0px;
+  background:#222;
+  }
+  .head h1{
+  color:black;
+  text-align:center;
+  color:#4299C9EB;
+  }
+  
+  .tail{
+  height:50px;
+  width:50px;
+  border-radius:50%;
+  background-color:#111;
+  margin-left:43%;
+  margin-top:150%;
+  }
+  .tail:hover{
+  transform:scale(1.1);
+  transition: transform ease 0.3s;
+  }
+  .daily {
+  text-align: center;
+  height:50px;
+  width:100%;
+  border:0.5px solid red;
+  box-shadow:0 0 10px red;
+  background: transparent ;
+  color:#fff;
+  font-size:18px;
+  border-radius:30px;
+  }
+  .daily p{
+  margin-top:10px;
+  }
+  .dTask p{
+  text-align:left;
+  margin:20px;
+  scale: 0;
+  transition:all ease 0.5s;
+  }
+  .dTask{
+  
+  }</style>
+</head>
+
+<body>
+  <div class="head">
+    <h1>TimeXy</h1>
+  </div>
+  <div class="daily">
+    <p>Your Daily Task</p>
+    <div class="dTask">
+      <br>
+      <p>Complete Your Fair Note <br>
+        Find Github Too<br>
+        Comple Your Spck Project<br>
+        Make Your Instagram Profile<br>
+      </p>
+    </div>
+  </div>
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+ var  daily = document.querySelector(".daily")
+ var flag = 0;
+ var dTask = document.querySelector(".dTask p");
+ daily.addEventListener("click",function(){
+if (flag == 0){
+  dTask.style.scale="0";
+  
+  flag = 1;
+}
+else{
+  dTask.style.scale="1";
+  flag = 0;
+}
+ });
+});
+
+</script>
+
+</html>
